@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>untitled - Paint</title>
+<meta name="description" content="Windows 95 Paint, recreated in the browser. Part of Paint Through the Ages by der_zuhalter.">
+<link rel="icon" href="/favicon.svg">
+<link rel="stylesheet" href="/lib/base.css"><link rel="stylesheet" href="/win95/skin.css">
+</head><body>
+<script type="module">
+import { boot } from '/lib/profiles.js';
+import { ICONS } from '/lib/icons.js';
+const app = boot('win95');
+const tb = document.createElement('div'); tb.className = 'taskbar';
+tb.innerHTML = `<a class="startbtn" href="/" title="Back to Paint Through the Ages"><i><b style="background:#f00"></b><b style="background:#0a0"></b><b style="background:#00f"></b><b style="background:#fc0"></b></i>Start</a><div class="taskbtn">${ICONS.brush}<span class="tname">untitled - Paint</span></div><div class="tray"></div>`;
+document.querySelector('.desk').append(tb);
+const clock = () => tb.querySelector('.tray').textContent = new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+clock(); setInterval(clock, 15000);
+new MutationObserver(() => tb.querySelector('.tname').textContent = document.title).observe(document.querySelector('title'), { childList: true });
+</script>
+</body></html>

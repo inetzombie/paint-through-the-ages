@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paint Through the Ages</title>
+<meta name="description" content="Four eras of Microsoft Paint, recreated in the browser: Windows 1.0, Windows 2.x, Windows 3.1 Paintbrush and Windows 95 Paint.">
+<meta property="og:title" content="Paint Through the Ages"><meta property="og:description" content="Draw in Windows 1.0, 2.x, 3.1 and 95 Paint, right in your browser.">
+<meta property="og:image" content="/shots/win95.png">
+<link rel="icon" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:#008080;font:13px Tahoma,"MS Sans Serif",Arial,sans-serif;color:#000;display:flex;flex-direction:column;align-items:center;padding:24px 12px 40px}
+.win{background:#c0c0c0;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px #808080,inset 2px 2px #dfdfdf;padding:3px;max-width:980px;width:100%}
+.tt{background:linear-gradient(90deg,#000080,#1084d0);color:#fff;font-weight:bold;padding:3px 6px;display:flex;justify-content:space-between}
+.inner{padding:16px 18px}
+h1{font:bold 30px "Times New Roman",serif;margin:4px 0 4px;letter-spacing:.5px}
+p.lede{margin:0 0 16px;max-width:640px;line-height:1.45}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+a.card{display:flex;flex-direction:column;text-decoration:none;color:#000;background:#c0c0c0;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px #808080,inset 2px 2px #dfdfdf;padding:8px}
+a.card:hover .pv,a.card:focus .pv{outline:2px dotted #000;outline-offset:2px}
+a.card:active{box-shadow:inset 1px 1px #0a0a0a,inset -1px -1px #fff,inset 2px 2px #808080}
+.pv{aspect-ratio:4/3;background:#808080 center/cover no-repeat;box-shadow:inset 1px 1px #808080,inset -1px -1px #fff;image-rendering:auto;margin-bottom:8px;position:relative}
+.yr{position:absolute;right:6px;bottom:6px;background:#ffffe1;border:1px solid #000;padding:1px 5px;font-size:11px}
+.card b{font-size:15px}
+.card span{font-size:12px;line-height:1.35;margin-top:3px;color:#222}
+.go{margin-top:8px;align-self:flex-start;min-width:75px;text-align:center;padding:4px 10px;box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px #808080,inset 2px 2px #dfdfdf;outline:1px solid #000}
+.feat{margin-top:18px;background:#fff;box-shadow:inset 1px 1px #808080,inset -1px -1px #fff,inset 2px 2px #0a0a0a;padding:10px 14px;line-height:1.5}
+.feat ul{margin:4px 0;padding-left:20px}
+footer{margin-top:14px;color:#fff;font-size:12px;text-align:center;text-shadow:1px 1px #004040}
+footer a{color:#fff}
+</style></head><body>
+<div class="win">
+  <div class="tt"><span>Paint Through the Ages</span><span>_ □ ×</span></div>
+  <div class="inner">
+    <h1>Paint Through the Ages</h1>
+    <p class="lede">Four eras of Microsoft's paint program, rebuilt from scratch for the browser. Pick a version — each one has the skin, toolbox and quirks of its time, plus undo, open/save PNG, autosave and touch drawing.</p>
+    <div class="grid">
+      <a class="card" href="/win1"><div class="pv" style="background-image:url(/shots/win1.png)"><span class="yr">1985</span></div><b>Windows 1.0 Paint</b><span>Monochrome, tiled windows, 24 fill patterns, FatBits, isometric lines and Bézier curves.</span><div class="go">Open</div></a>
+      <a class="card" href="/win2"><div class="pv" style="background-image:url(/shots/win2.png)"><span class="yr">1987</span></div><b>Windows 2.x Paint</b><span>Same monochrome Paint, now in overlapping windows with minimize and maximize arrows.</span><div class="go">Open</div></a>
+      <a class="card" href="/win31"><div class="pv" style="background-image:url(/shots/win31.png)"><span class="yr">1992</span></div><b>Windows 3.1 Paintbrush</b><span>Color arrives: 28-color palette, scissors and pick, color eraser, linesize box, Pick menu effects.</span><div class="go">Open</div></a>
+      <a class="card" href="/win95"><div class="pv" style="background-image:url(/shots/win95.png)"><span class="yr">1995</span></div><b>Windows 95 Paint</b><span>The classic: 16 tools, option box, fill modes, magnifier, text toolbar, Flip/Rotate and Stretch/Skew.</span><div class="go">Open</div></a>
+    </div>
+    <div class="feat"><b>Every version has</b>
+      <ul><li>Undo (Ctrl+Z) and the era's Edit menu</li><li>File &gt; New, Open (any image) and Save as PNG</li><li>Autosave to this browser (localStorage), restored on return</li><li>Touch &amp; pen drawing — two-finger drag scrolls, long-press a color for the background color</li></ul>
+    </div>
+  </div>
+</div>
+<footer>© 2026 der_zuhalter · MIT License · Fan recreation, not affiliated with or endorsed by Microsoft.</footer>
+</body></html>

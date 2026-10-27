@@ -1,0 +1,46 @@
+/* Windows 1.0 Paint skin (tiled windows, monochrome Paint). (c) 2026 der_zuhalter, MIT */
+body{background:#fff;font:bold 13px Arial,Helvetica,sans-serif;color:#000}
+.win{background:#fff;border:2px solid #000;margin:0}
+.titlebar{background:#0000aa;color:#fff;height:20px;border-bottom:2px solid #000}
+.titlebar .caption{text-align:center;letter-spacing:.5px}
+.sysbox{display:none}
+.menubar{background:#fff;border-bottom:2px solid #000;padding:1px 2px}
+.mtop{padding:1px 8px}
+.mtop u,.mitem u{text-decoration:none}
+.mtop.open{background:#000;color:#fff}
+.dropdown{background:#fff;border:2px solid #000;padding:2px 0;font:bold 13px Arial,Helvetica,sans-serif}
+.mitem{padding:1px 6px 1px 0}
+.mitem:hover{background:#000;color:#fff}
+.mitem.disabled{color:#888}
+.msep{border-top:1px dotted #000;margin:3px 0}
+.toolside{width:58px;border-right:2px solid #000;background:#fff;padding:0}
+.tools{grid-template-columns:1fr 1fr;width:100%;border-bottom:2px solid #000}
+.tool{height:24px;background:#fff;border:0;border-right:1px solid #000;border-bottom:1px solid #000}
+.tool:nth-child(2n){border-right:0}
+.tool svg{filter:grayscale(1) contrast(3)}
+.tool.on{background:#000}
+.tool.on svg{filter:grayscale(1) contrast(3) invert(1)}
+.opts{width:100%;padding:4px}
+.linesize{border:1px solid #000}
+.ls{height:13px;padding:0 6px}
+.ls.on{background:#000}.ls.on .lsbar{background:#fff}
+.scroller{background:#fff}
+.scroller::-webkit-scrollbar{width:18px;height:18px;background:#fff;border-left:2px solid #000}
+.scroller::-webkit-scrollbar-thumb{background:#fff;border:2px solid #000}
+.paper{outline:1px solid #000}
+.palette{border-top:2px solid #000;background:#fff;padding:3px 4px;gap:6px}
+.curpat{width:40px;height:34px;border:2px solid #000;flex:none}
+.pats{display:grid;grid-template-columns:repeat(12,minmax(14px,26px));grid-template-rows:16px 16px;border:1px solid #000;flex:1;max-width:320px}
+.pats .sw{border-right:1px solid #000;border-bottom:1px solid #000;image-rendering:pixelated}
+.pats .sw.on{outline:2px solid #000;outline-offset:-4px;box-shadow:inset 0 0 0 2px #fff}
+.status{display:none}
+.iconarea{flex:none;height:64px;background:repeating-conic-gradient(#fff 0 25%,#aaa 0 50%) 0 0/2px 2px;display:flex;gap:18px;align-items:flex-end;padding:4px 10px;font:bold 11px Arial,sans-serif;border-top:2px solid #000}
+.dicon{text-align:center;line-height:1.1;background:#fff;padding:0 2px}
+.ibox{width:44px;height:28px;border:2px solid #000;margin:0 auto 2px;display:flex;align-items:center;justify-content:center;background:#fff;font-size:10px;filter:grayscale(1)}
+.dlg{background:#fff;border:2px solid #000;box-shadow:4px 4px 0 #000}
+.dlg .titlebar{display:none}
+.btn{min-width:64px;height:24px;background:#fff;border:2px solid #000;border-radius:8px;font:bold 13px Arial,sans-serif}
+.btn.default{border-width:3px}
+.btn:active{background:#000;color:#fff}
+.dlg input,.dlg select{font:bold 13px Arial;border:1px solid #000;padding:2px}
+.dlg fieldset{border:1px solid #000}

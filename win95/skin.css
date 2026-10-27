@@ -1,0 +1,82 @@
+/* Windows 95 Paint skin. (c) 2026 der_zuhalter, MIT */
+:root{--face:#c0c0c0;--raised:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px #808080,inset 2px 2px #dfdfdf;--sunk:inset -1px -1px #fff,inset 1px 1px #808080,inset -2px -2px #dfdfdf,inset 2px 2px #0a0a0a;--thin-sunk:inset -1px -1px #fff,inset 1px 1px #808080}
+body{background:#008080;font:11px Tahoma,"MS Sans Serif",Geneva,Arial,sans-serif;color:#000}
+.win{background:var(--face);box-shadow:var(--raised);padding:3px;margin:0}
+.titlebar{background:#000080;color:#fff;height:18px;padding:0 2px;gap:3px;font-weight:bold}
+.titlebar .sysbox{display:none}
+.ticon svg{width:16px;height:16px;display:block}
+.tb{width:16px;height:14px;background:var(--face);box-shadow:var(--raised);position:relative;margin-left:0}
+.tb-close{margin-left:2px}
+.tb span{position:absolute;inset:0}
+.tb-min span::after{content:"";position:absolute;left:4px;bottom:3px;width:6px;height:2px;background:#000}
+.tb-max span::after{content:"";position:absolute;left:3px;top:2px;width:9px;height:9px;box-sizing:border-box;border:1px solid #000;border-top-width:2px}
+.tb-close span::before,.tb-close span::after{content:"";position:absolute;left:3px;top:6px;width:9px;height:2px;background:#000;transform:rotate(45deg)}
+.tb-close span::after{transform:rotate(-45deg)}
+.tb:active{box-shadow:var(--sunk)}
+.menubar{padding:1px 0}
+.mtop{padding:3px 6px}
+.mtop.open{box-shadow:var(--thin-sunk)}
+.dropdown{background:var(--face);box-shadow:var(--raised);padding:3px;font:11px Tahoma,"MS Sans Serif",Arial,sans-serif}
+.mitem{padding:3px 0;}
+.mitem:hover,.mitem.hassub:focus-within{background:#000080;color:#fff}
+.mitem.disabled{color:#808080;text-shadow:1px 1px #fff}
+.mitem.disabled:hover{background:#000080;color:#808080;text-shadow:none}
+.msep{border-top:1px solid #808080;border-bottom:1px solid #fff;margin:3px 1px}
+.textbar{padding:3px 4px;box-shadow:var(--raised);margin:2px 0;width:max-content;max-width:100%;flex-wrap:wrap}
+.textbar select{font:11px Tahoma,Arial,sans-serif;height:21px}
+.tbb{width:23px;height:22px;background:var(--face);box-shadow:var(--raised);border:0;font:13px "Times New Roman",serif}
+.tbb.on{box-shadow:var(--sunk);background:#dfdfdf}
+.tbt{font-weight:bold;margin-right:4px}
+.body{margin-top:1px}
+.toolside{width:56px;padding:3px 3px 0 4px}
+.tools{gap:0}
+.tool{width:25px;height:25px;background:var(--face);box-shadow:var(--raised);border:0}
+.tool.on{box-shadow:var(--sunk);background:repeating-conic-gradient(#fff 0 25%,#c0c0c0 0 50%) 0 0/2px 2px}
+.tool.on svg{transform:translate(1px,1px)}
+.opts{margin-top:4px}
+.optbox{width:41px;min-height:66px;box-shadow:var(--sunk);display:flex;flex-direction:column;align-items:center;justify-content:space-evenly;padding:3px 2px}
+.oi{display:flex;align-items:center;justify-content:center;cursor:pointer;width:100%;min-height:12px}
+.oi.on{background:#000080}
+.oi.on svg,.oi.on .sq{filter:invert(1)}
+.oi.on.big svg{filter:none}
+.oi.big{padding:2px 0}
+.oi.big.on{background:#000080}
+.oi .sq{background:#000}
+.oi.txt{font-size:10px;padding:1px 0}
+.oi.txt.on{color:#fff}
+.opt-brush{display:grid;grid-template-columns:repeat(3,12px);gap:2px;justify-content:center;align-content:center}
+.opt-brush .oi{width:12px;height:12px}
+.oi.lw{height:12px;padding:0 4px}
+.oi.lw.on .lsbar{background:#fff}
+.oi.fm{padding:2px 0}
+.oi.air{height:auto;padding:1px 0}
+.scroller{background:#808080;box-shadow:var(--sunk);padding:4px;margin-left:2px}
+.scroller::-webkit-scrollbar{width:16px;height:16px;background:repeating-conic-gradient(#fff 0 25%,#c0c0c0 0 50%) 0 0/2px 2px}
+.scroller::-webkit-scrollbar-thumb{background:var(--face);box-shadow:var(--raised)}
+.scroller::-webkit-scrollbar-corner{background:var(--face)}
+.palette{padding:4px 2px 2px;gap:4px}
+.cur2{width:32px;height:32px;box-shadow:var(--sunk);position:relative;background:repeating-conic-gradient(#fff 0 25%,#c0c0c0 0 50%) 0 0/2px 2px;flex:none}
+.cur2 .fgc,.cur2 .bgc{position:absolute;width:15px;height:15px;box-shadow:inset -1px -1px #dfdfdf,inset 1px 1px #808080;outline:1px solid #fff}
+.cur2 .fgc{left:5px;top:5px;z-index:2}.cur2 .bgc{left:12px;top:12px}
+.palette .cols{display:grid;grid-template-columns:repeat(14,16px);grid-template-rows:16px 16px;gap:0}
+.palette .sw{width:16px;height:16px;box-shadow:inset -1px -1px #fff,inset 1px 1px #808080,inset -2px -2px #dfdfdf,inset 2px 2px #000;border:2px solid transparent;background-clip:padding-box!important}
+.status{gap:2px;padding:2px 0 0;height:22px}
+.status>div{box-shadow:var(--thin-sunk);padding:3px 4px}
+.status .pos,.status .dim{width:110px;flex:none}
+.dlg{background:var(--face);box-shadow:var(--raised);padding:3px}
+.dlg .tb-close{display:block}
+.dlg-btns .btn,.btn{min-width:75px;height:23px;background:var(--face);box-shadow:var(--raised);border:0;font:11px Tahoma,Arial,sans-serif}
+.btn.default{outline:1px solid #000}
+.btn:active{box-shadow:var(--sunk)}
+.dlg input,.dlg select{font:11px Tahoma,Arial;box-shadow:var(--sunk);border:0;padding:3px 4px;background:#fff}
+.dlg input[type=radio]{box-shadow:none}
+.dlg fieldset{border:1px solid #808080;box-shadow:1px 1px #fff}
+.cpwin{background:var(--face);box-shadow:var(--raised);padding:3px}
+.taskbar{flex:none;height:28px;background:var(--face);box-shadow:inset 0 1px #dfdfdf,inset 0 2px #fff;display:flex;align-items:center;gap:4px;padding:2px 2px 0}
+.startbtn{height:22px;padding:0 5px;box-shadow:var(--raised);font-weight:bold;display:flex;align-items:center;gap:3px;cursor:pointer;text-decoration:none;color:#000}
+.startbtn i{display:inline-grid;grid-template-columns:7px 7px;gap:1px;transform:skewY(-6deg)}
+.startbtn i b{width:7px;height:6px;display:block}
+.taskbtn{height:22px;min-width:120px;padding:0 6px;box-shadow:var(--sunk);background:repeating-conic-gradient(#fff 0 25%,#c0c0c0 0 50%) 0 0/2px 2px;display:flex;align-items:center;gap:4px;font-weight:bold}
+.taskbtn svg{width:16px;height:16px}
+.tray{margin-left:auto;box-shadow:var(--thin-sunk);height:22px;padding:0 10px;display:flex;align-items:center}
+@media (max-width:640px){.status .pos,.status .dim{width:60px}.palette .cols{grid-template-columns:repeat(14,minmax(10px,16px))}.palette .sw{width:auto}.taskbtn{min-width:0}}
